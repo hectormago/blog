@@ -23,31 +23,9 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <h1>Mingalaba</h1>
-      <a
-        target="_blank"
-        href="/rss.xml"
-        class="rss-link"
-        aria-label="rss feed"
-        title="RSS Feed"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-          ><path
-            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-          ></path><path
-            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-          ></path><circle cx="6" cy="18" r="2"></circle>
-        </svg>
-        <span class="sr-only">RSS Feed</span>
-      </a>
-
+      <h1>Destacados</h1>
       <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p>
+        Pellentesque et porttitor urna. Nunc tempor pulvinar sapien a dictum.
         Read the blog posts or check
         <LinkButton
           className="underline decoration-dashed underline-offset-4 hover:text-skin-accent"
@@ -56,6 +34,24 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           README
         </LinkButton> for more info.
       </p>
+      <figure>
+        <img
+          src="https://scontent.fasu6-1.fna.fbcdn.net/v/t39.30808-6/408934611_122116319642103197_3886482442408077502_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=3635dc&_nc_ohc=y6S9-cEXmycAX_stLqR&_nc_ht=scontent.fasu6-1.fna&oh=00_AfCN2GkRlYHCOFPIPoJ9MpcsGwHRBaF9lPOWWIaZVYhyEQ&oe=65EBA109"
+          alt=""
+        />
+        <figcaption>
+          Etiam hendrerit rhoncus tincidunt. Cras fermentum dolor nunc, in
+          sodales purus sagittis eget. Vestibulum venenatis nulla tempor,
+          consectetur odio a, scelerisque elit. Aenean tempor nunc a turpis
+          elementum, sed tristique lacus hendrerit. Donec varius porttitor lacus
+          eu venenatis. Maecenas sagittis, mauris a dignissim placerat, odio
+          justo facilisis lacus, vitae dapibus ante est eu augue. Cras a nisl
+          nulla. Mauris felis nisl, tristique ac neque at, tristique facilisis
+          sapien. Maecenas eu cursus erat. Praesent tempor dolor id eros
+          tincidunt sollicitudin in in mi. Vivamus venenatis lacus ut bibendum
+          luctus.
+        </figcaption>
+      </figure>
       {
         // only display if at least one social link is enabled
         socialCount > 0 && (
@@ -88,27 +84,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </>
       )
     }
-
-    {
-      recentPosts.length > 0 && (
-        <section id="recent-posts">
-          <h2>Recent Posts</h2>
-          <ul>
-            {recentPosts.map(
-              ({ data, slug }, index) =>
-                index < 4 && (
-                  <Card
-                    href={`/posts/${slug}/`}
-                    frontmatter={data}
-                    secHeading={false}
-                  />
-                )
-            )}
-          </ul>
-        </section>
-      )
-    }
-
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
         All Posts
