@@ -52,15 +52,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           luctus.
         </figcaption>
       </figure>
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
     </section>
 
     <Hr />
@@ -84,6 +75,42 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </>
       )
     }
+    <section id="hero">
+      <h1>Destacados</h1>
+      <p>
+        Pellentesque et porttitor urna. Nunc tempor pulvinar sapien a dictum.
+        Etiam hendrerit rhoncus tincidunt. Cras fermentum dolor nunc, in sodales
+        purus sagittis eget. Vestibulum venenatis nulla tempor, consectetur odio
+        a, scelerisque elit.
+      </p>
+      <figure>
+        <img
+          src="https://scontent.fasu6-2.fna.fbcdn.net/v/t39.30808-6/408963243_122116319588103197_8840497629079873585_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=3635dc&_nc_ohc=I52oFO0HPqsAX9tbWYm&_nc_ht=scontent.fasu6-2.fna&oh=00_AfDlX03zF48Zp9A-inTMjQ59z5svksfgbS7E-uZ-ryp8wg&oe=65EADD6F"
+          alt=""
+        />
+        <figcaption>
+          Etiam hendrerit rhoncus tincidunt. Cras fermentum dolor nunc, in
+          sodales purus sagittis eget. Vestibulum venenatis nulla tempor,
+          consectetur odio a, scelerisque elit. Aenean tempor nunc a turpis
+          elementum, sed tristique lacus hendrerit. Donec varius porttitor lacus
+          eu venenatis. Maecenas sagittis, mauris a dignissim placerat, odio
+          justo facilisis lacus, vitae dapibus ante est eu augue. Cras a nisl
+          nulla. Mauris felis nisl, tristique ac neque at, tristique facilisis
+          sapien. Maecenas eu cursus erat. Praesent tempor dolor id eros
+          tincidunt sollicitudin in in mi. Vivamus venenatis lacus ut bibendum
+          luctus.
+        </figcaption>
+      </figure>
+      {
+        // only display if at least one social link is enabled
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <div class="social-links">Social Links:</div>
+            <Socials />
+          </div>
+        )
+      }
+    </section>
     <div class="all-posts-btn-wrapper">
       <LinkButton href="/posts/">
         All Posts
